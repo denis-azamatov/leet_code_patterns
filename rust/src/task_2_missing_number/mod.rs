@@ -1,5 +1,7 @@
 fn missing_number(nums: Vec<i32>) -> i32 {
-    0
+    let n = nums.len() as i32;
+    let sum: i32 = nums.into_iter().sum();
+    return (n + 1) * n / 2 - sum;
 }
 
 #[cfg(test)]
