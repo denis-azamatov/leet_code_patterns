@@ -2,13 +2,13 @@
 
 namespace Tests;
 
-public class Task2MissingDuplicateTest
+public class Task_2_MissingDuplicateTest
 {
     [Theory]
     [MemberData(nameof(Data))]
     public void MissingNumber(int[] nums, int expected)
     {
-        var res = new Task2MissingNumber().MissingNumber(nums);
+        var res = Task_2_MissingNumber.MissingNumber(nums);
         Assert.Equal(res, expected);
     }
 

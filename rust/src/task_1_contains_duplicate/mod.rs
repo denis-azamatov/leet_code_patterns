@@ -1,5 +1,6 @@
 use std::collections::HashSet;
 
+/// Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 pub fn contains_duplicate(nums: Vec<i32>) -> bool {
     return nums.len() != HashSet::<_>::from_iter(nums).len();
 }

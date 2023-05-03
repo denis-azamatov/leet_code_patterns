@@ -2,13 +2,13 @@ using Problems;
 
 namespace Tests;
 
-public class Task1ContainsDuplicateTest
+public class Task_1_ContainsDuplicateTest
 {
     [Theory]
     [MemberData(nameof(Data))]
     public void ContainsDuplicate(int[] nums, bool expected)
     {
-        var res = new Task1ContainsDuplicate().ContainsDuplicate(nums);
+        var res = Task_1_ContainsDuplicate.ContainsDuplicate(nums);
         Assert.Equal(res, expected);
     }
 

@@ -1,3 +1,6 @@
+/// Given an array nums containing n distinct numbers in the range \[0, n\], return the only number in the range that is missing from the array.
+/// ## Solution
+/// Sum of numbers in range \[0, n\] - Sum of numbers in given array
 fn missing_number(nums: Vec<i32>) -> i32 {
     let n = nums.len() as i32;
     let sum: i32 = nums.into_iter().sum();
