@@ -5,3 +5,4 @@ mod task_4_single_number;
 mod task_5_climbing_stairs;
 mod task_6_best_time_to_buy_and_sell_stock;
 mod task_7_range_sum_query_immutable;
+mod task_8_counting_bits;
