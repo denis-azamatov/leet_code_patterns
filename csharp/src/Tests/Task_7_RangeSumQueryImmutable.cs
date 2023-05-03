@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Transactions;
-using System.Xml.Linq;
-
-namespace Problems;
+﻿namespace Tests;
 
 /// <summary>
 /// Given an integer array nums, handle multiple queries of the following type
@@ -40,4 +31,21 @@ public class Task_7_RangeSumQueryImmutable
             return sums[right] - sums[left - 1];
         }
     }
+
+    [Theory]
+    [MemberData(nameof(Data))]
+    public void Test(int expected, int[] nums, int left, int right)
+    {
+        var numArray = new NumArray(nums);
+        var res = numArray.SumRange(left, right);
+        Assert.Equal(res, expected);
+    }
+
+    public static IEnumerable<object[]> Data =>
+        new[]
+        {
+            new object[] {1, new int[] {-2,0,3,-5,2,-1}, 0,2},
+            new object[] {-1, new int[] {-2,0,3,-5,2,-1}, 2,5},
+            new object[] {-3, new int[] {-2,0,3,-5,2,-1}, 0,5},
+        };
 }
